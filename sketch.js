@@ -29,12 +29,26 @@ function setup() {
 	groundSprite.shapeColor=color("pink")
 
 	box1=createSprite(width/2,height-50,200,20)
-	box1.shapeColor=color("red")
+	box1.shapeColor=color("red") 
+	
+	box1Body = Bodies.rectangle(width/2,height-50,,200,20, {isStatic:true} )
+	World.add(world, box1Body)
+	
+	
 	box2=createSprite(510,610,60,100)
 	box2.shapeColor=color("red")
+	
+	box2Body = Bodies.rectangle(510,610,60,100, {isStatic:true} )
+	World.add(world,box2Body)
+	
 	box3=createSprite(310,610,60,100)
 	box3.shapeColor=color("red")
-
+	
+	box3Body = Bodies.rectangle(310,610,60,100, {isStatic:true} )
+	World.add(world, box3Body)
+	
+	
+	
 	engine = Engine.create();
 	world = engine.world;
 
